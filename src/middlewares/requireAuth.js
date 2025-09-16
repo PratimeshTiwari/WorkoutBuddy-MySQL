@@ -5,7 +5,7 @@ import { pool } from '../db/db.js';
 const requireAuth = async (req, res, next) => {
     const { authorization } = req.headers;
 
-    if (!authorization) {
+    if(!authorization){
         return res.status(401).json({ error: 'Authorization token required' });
     }
 
